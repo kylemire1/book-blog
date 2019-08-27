@@ -13,6 +13,10 @@ h1 {
   font-size: 3.9rem;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 p {
   font-size: 1.2rem;
   margin-bottom: 2em;
@@ -39,4 +43,16 @@ a {
 .btn-nobg {
   background: transparent;
   color: var(--primary-color);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
+  grid-gap: 1em;
+  height: 100vh;
+  align-items: center;
+}
+
+section div:first-child {
+  grid-column: span 4;
 }

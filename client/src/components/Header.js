@@ -35,7 +35,6 @@ const styles = {
     height: "5vh",
     position: "absolute",
     width: "100%",
-    maxWidth: "1740px",
     top: "0",
     left: "50%",
     transform: "translateX(-50%)",
