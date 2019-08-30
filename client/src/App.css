@@ -44,15 +44,3 @@ a {
   background: transparent;
   color: var(--primary-color);
 }
-
-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
-  grid-gap: 1em;
-  height: 100vh;
-  align-items: center;
-}
-
-section div:first-child {
-  grid-column: span 4;
-}

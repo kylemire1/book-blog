@@ -4,9 +4,21 @@ const router = express.Router();
 const Post = require("../db/models/post");
 const validateRequest = require("../middleware/validateRequest");
 
-router.get("/posts", async (req, res) => {
+router.get("/posts/", async (req, res) => {
   try {
     const posts = await Post.find();
+
+    return await res.send(posts);
+  } catch (err) {
+    return res.status(404).json({ message: err.message });
+  }
+});
+
+router.get("/posts/limit/:limit", async (req, res) => {
+  try {
+    let { limit } = req.params;
+
+    const posts = await Post.find().limit(parseInt(limit));
 
     return await res.send(posts);
   } catch (err) {
