@@ -1,3 +1,9 @@
+/*************************
+*
+* General Styling
+*
+**************************/
+
 :root {
   --primary-color: #b273fe;
 }
@@ -19,15 +25,208 @@ h2 {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
+  color: #686868;
+  max-width: 36em;
 }
 
 a {
   text-decoration: none;
 }
 
+/*************************
+*
+* Layout
+*
+**************************/
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 2em 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 2em;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-text {
+  max-width: 545px;
+}
+
+.latest-review {
+  position: relative;
+}
+
+.latest-review .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.latest-review .left {
+  max-width: 630px;
+  margin-right: 1em;
+}
+
+.latest-review .right {
+  margin-left: 1em;
+}
+
+.latest-review .cover {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 18px;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.author-name {
+  font-size: 1.5rem;
+  color: #656565;
+}
+
+.rating {
+  display: flex;
+}
+
+.star-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.subpage-content {
+  margin-top: 6em;
+}
+
+.subpage-content section {
+  margin: 3em 0;
+}
+
+.all-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  align-items: center;
+}
+
+.review-card {
+  display: flex;
+  position: relative;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 6em;
+  margin-right: 5em;
+  padding: 1em;
+  box-shadow: 3px 5px 20px rgba(178, 115, 254, 0.3);
+  justify-self: center;
+}
+
+.review-card h2 {
+  font-size: 1.5rem;
+}
+
+.review-card .left {
+  width: 100%;
+}
+
+.review-card .review-meta {
+  flex-direction: column;
+  justify-content: start;
+}
+
+.review-card .star-list {
+  justify-content: flex-start;
+  margin-top: 0.25em;
+}
+
+.review-card .author-name {
+  font-size: 1.1rem;
+}
+
+.review-card .right {
+  position: absolute;
+  right: -5em;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 12px;
+}
+
+.review-card .cover {
+  max-width: 125px;
+  border-radius: 12px;
+}
+
+.review-card .btn {
+  font-size: 1rem;
+}
+
+.review-card .star {
+  width: 16px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+}
+
+footer a {
+  margin-bottom: 2em;
+}
+
+/*************************
+*
+* Elements
+*
+**************************/
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.star {
+  width: 20px;
+}
+
+/*************************
+*
+* Components
+*
+**************************/
+
 .btn {
-  border: solid 4px var(--primary-color);
   border-radius: 30px;
   font-size: 1.4rem;
   padding: 0.5em 3em;
@@ -43,4 +242,5 @@ a {
 .btn-nobg {
   background: transparent;
   color: var(--primary-color);
+  box-shadow: 5px 8px 15px rgba(178, 115, 254, 0.3);
 }

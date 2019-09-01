@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import ReviewCard from "../components/ReviewCard";
@@ -8,7 +8,7 @@ const AllReviews = () => {
 
   useEffect(() => {
     fetchReviews();
-  }, []);
+  });
 
   const fetchReviews = async () => {
     const response = await axios.get("/api/v1/posts/");
@@ -32,10 +32,10 @@ const AllReviews = () => {
   }
 
   return (
-    <section className="container">
+    <main className="container subpage-content">
       <h1>All Reviews</h1>
-      {reviewDisplay}
-    </section>
+      <section className="all-reviews">{reviewDisplay}</section>
+    </main>
   );
 };
 

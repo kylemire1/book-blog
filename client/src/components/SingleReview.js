@@ -1,14 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 
 const SingleReview = props => {
-  const [reviewID, setReviewID] = useState(props.match.params.id);
+  const [reviewID] = useState(props.match.params.id);
   const [review, setReview] = useState({});
 
   useEffect(() => {
     fetchReview();
-  }, []);
+  });
 
   const fetchReview = async () => {
     const response = await axios.get(`/api/v1/posts/${reviewID}`);
@@ -20,17 +21,20 @@ const SingleReview = props => {
   if (review) {
     reviewDisplay = (
       <Fragment>
-        <h2>{review.title}</h2>
+        <h1>{review.title}</h1>
+        <p>By {review.author}</p>
         <p>{review.bodyText}</p>
       </Fragment>
     );
   }
 
   return (
-    <div>
-      <h1>Single Review</h1>
+    <main className="container subpage-content">
+      <Link to="/all-reviews/">
+        <i class="fas fa-arrow-left"></i> Back to All Reviews
+      </Link>
       {reviewDisplay}
-    </div>
+    </main>
   );
 };
 
