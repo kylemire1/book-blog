@@ -78,7 +78,7 @@ nav li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  height: 90vh;
 }
 
 .latest-review .left {
@@ -93,7 +93,6 @@ nav li {
 .latest-review .cover {
   max-width: 400px;
   width: 100%;
-  border-radius: 18px;
 }
 
 .review-meta {
@@ -143,6 +142,10 @@ nav li {
   padding: 1em;
   box-shadow: 3px 5px 20px rgba(178, 115, 254, 0.3);
   justify-self: center;
+  background-image: url("./assets/swoosh.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
 }
 
 .review-card h2 {
@@ -188,6 +191,25 @@ nav li {
   width: 16px;
 }
 
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+}
+
+.review-container .cover {
+  max-width: 400px;
+}
+
+.review-container .left {
+  margin-right: 2em;
+}
+
+.review-container .right {
+  margin-left: 2em;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -210,6 +232,14 @@ footer a {
 *
 **************************/
 
+.hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.85;
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -218,6 +248,26 @@ footer a {
 
 .star {
   width: 20px;
+}
+
+.latest-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+}
+
+.single-bg {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+}
+
+.cover {
+  border-radius: 18px;
 }
 
 /*************************

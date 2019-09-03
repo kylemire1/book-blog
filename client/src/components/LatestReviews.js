@@ -8,7 +8,7 @@ const LatestReviews = () => {
 
   useEffect(() => {
     fetchReviews();
-  });
+  }, []);
 
   const fetchReviews = async () => {
     const response = await axios.get("/api/v1/posts/limit/3");
@@ -18,9 +18,10 @@ const LatestReviews = () => {
 
   let reviewDisplay = null;
   if (reviews) {
-    reviewDisplay = reviews.map(review => (
+    reviewDisplay = reviews.map((review, index) => (
       <Preview
         key={review._id}
+        index={index}
         id={review._id}
         title={review.title}
         bodyText={review.bodyText}

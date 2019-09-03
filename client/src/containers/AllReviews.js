@@ -8,7 +8,7 @@ const AllReviews = () => {
 
   useEffect(() => {
     fetchReviews();
-  });
+  }, []);
 
   const fetchReviews = async () => {
     const response = await axios.get("/api/v1/posts/");

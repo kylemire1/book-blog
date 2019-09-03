@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import bg from "../assets/hero-bg.png";
+
 const Hero = () => {
   return (
     <Fragment>
@@ -16,6 +18,7 @@ const Hero = () => {
           </a>
         </div>
       </section>
+      <img className="hero-bg" aria-hidden="true" alt="" src={bg} />
     </Fragment>
   );
 };

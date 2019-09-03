@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import singleBg from "../assets/latest-bg.png";
 
 const SingleReview = props => {
   const [reviewID] = useState(props.match.params.id);
@@ -9,7 +10,7 @@ const SingleReview = props => {
 
   useEffect(() => {
     fetchReview();
-  });
+  }, []);
 
   const fetchReview = async () => {
     const response = await axios.get(`/api/v1/posts/${reviewID}`);
@@ -29,11 +30,19 @@ const SingleReview = props => {
   }
 
   return (
-    <main className="container subpage-content">
-      <Link to="/all-reviews/">
-        <i class="fas fa-arrow-left"></i> Back to All Reviews
-      </Link>
-      {reviewDisplay}
+    <main className=" subpage-content">
+      <div className="review-container container">
+        <div className="left">
+          <Link to="/all-reviews/">
+            <i className="fas fa-arrow-left"></i> Back to All Reviews
+          </Link>
+          {reviewDisplay}
+        </div>
+        <div className="right">
+          <img className="cover" alt="" src={review.bookCover} />
+        </div>
+      </div>
+      <img src={singleBg} alt="" className="single-bg" />
     </main>
   );
 };

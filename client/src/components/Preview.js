@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import starIcon from "../assets/star.svg";
+import latestBg from "../assets/latest-bg.png";
 
-const Preview = ({ id, title, bodyText, cover, rating, author }) => {
+const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
   let stars = Array.apply(0, Array(rating)).map(() => 0);
 
   stars = stars.map((star, index) => (
@@ -19,6 +20,11 @@ const Preview = ({ id, title, bodyText, cover, rating, author }) => {
     excerpt = `${excerpt} ${contentArr[i]} `;
   }
   excerpt = excerpt + ". . .";
+
+  let bg = null;
+  if (index % 2 === 0) {
+    bg = <img className="latest-bg" src={latestBg} aria-hidden="true" alt="" />;
+  }
 
   return (
     <section className="latest-review">
@@ -42,6 +48,7 @@ const Preview = ({ id, title, bodyText, cover, rating, author }) => {
           <img className="cover" src={cover} alt="" />
         </div>
       </div>
+      {bg}
     </section>
   );
 };
