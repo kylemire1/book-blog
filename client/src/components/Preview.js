@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import starIcon from "../assets/star.svg";
 import latestBg from "../assets/latest-bg.png";
+import blob1 from "../assets/review-blob-1.svg";
+import blob2 from "../assets/review-blob-2.svg";
+import blob3 from "../assets/review-blob-3.svg";
 
 const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
   let stars = Array.apply(0, Array(rating)).map(() => 0);
@@ -25,6 +28,8 @@ const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
   if (index % 2 === 0) {
     bg = <img className="latest-bg" src={latestBg} aria-hidden="true" alt="" />;
   }
+
+  const blobs = [blob1, blob2, blob3];
 
   return (
     <section className="latest-review">
