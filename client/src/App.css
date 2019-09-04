@@ -61,6 +61,10 @@ nav li {
   margin-left: 2em;
 }
 
+nav a {
+  font-weight: bold;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -310,6 +314,26 @@ footer a {
   opacity: 0.1;
 }
 
+.white {
+  color: white;
+  transition: color 0.25s ease;
+}
+
+.black {
+  color: black;
+  transition: color 0.25s ease;
+}
+
+.white-bg {
+  background: white;
+  transition: background 0.25s ease;
+}
+
+.no-bg {
+  background: transparent;
+  transition: background 0.25s ease;
+}
+
 /*************************
 *
 * Components
@@ -334,3 +358,9 @@ footer a {
   color: var(--primary-color);
   box-shadow: 5px 8px 15px rgba(178, 115, 254, 0.3);
 }
+
+/*************************
+*
+* Media Queries
+*
+**************************/

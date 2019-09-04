@@ -33,10 +33,10 @@ const SingleReview = props => {
     <main className=" subpage-content">
       <div className="review-container container">
         <div className="left">
+          {reviewDisplay}
           <Link to="/all-reviews/">
             <i className="fas fa-arrow-left"></i> Back to All Reviews
           </Link>
-          {reviewDisplay}
         </div>
         <div className="right">
           <img className="cover" alt="" src={review.bookCover} />

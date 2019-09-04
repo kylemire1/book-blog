@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import bg from "../assets/hero-bg.png";
 
@@ -13,9 +14,9 @@ const Hero = () => {
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo
           </p>
-          <a href="/all-reviews" className="btn btn-bg">
+          <Link to="/all-reviews" className="btn btn-bg">
             Take Me There
-          </a>
+          </Link>
         </div>
       </section>
       <img className="hero-bg" aria-hidden="true" alt="" src={bg} />
