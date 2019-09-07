@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Home from "./containers/Home";
 import AllReviews from "./containers/AllReviews";
 import SingleReview from "./components/SingleReview";
-import About from "./components/About";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/all-reviews" component={AllReviews} />
         <Route path="/review/:id" component={SingleReview} />
-        <Route path="/about-us/" component={About} />
       </div>
     </Router>
   );

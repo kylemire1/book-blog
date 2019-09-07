@@ -22,7 +22,7 @@ const Header = props => {
 
     setScrollDistance(scrolled * 1000);
   };
-
+  console.log(window.innerWidth);
   const linkClasses = [];
   if (props.history.location.pathname === "/" && scrollDistance <= 266) {
     linkClasses.push("white");
@@ -31,7 +31,6 @@ const Header = props => {
   }
 
   const headerClasses = [];
-  console.log(window.innerWidth);
   if (window.innerWidth < 1710 && scrollDistance >= 266) {
     headerClasses.push("white-bg");
   } else {
@@ -48,11 +47,6 @@ const Header = props => {
           <li>
             <Link className={linkClasses.join(" ")} to="/all-reviews">
               All Reviews
-            </Link>
-          </li>
-          <li>
-            <Link className={linkClasses.join(" ")} to="/about-us">
-              About Us
             </Link>
           </li>
         </ul>
