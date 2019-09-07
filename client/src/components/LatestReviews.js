@@ -2,9 +2,11 @@ import React, { Fragment, useEffect, useState } from "react";
 
 import axios from "axios";
 import Preview from "../components/Preview";
+import Spinner from "./Spinner";
 
 const LatestReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchReviews();
@@ -14,6 +16,7 @@ const LatestReviews = () => {
     const response = await axios.get("/api/v1/posts/limit/3");
     const reviews = await response.data;
     await setReviews(reviews);
+    await setLoading(false);
   };
 
   let reviewDisplay = null;
@@ -32,7 +35,7 @@ const LatestReviews = () => {
     ));
   }
 
-  return <Fragment>{reviewDisplay}</Fragment>;
+  return <Fragment>{loading ? <Spinner /> : reviewDisplay}</Fragment>;
 };
 
 export default LatestReviews;

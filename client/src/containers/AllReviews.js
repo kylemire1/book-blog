@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import axios from "axios";
 import ReviewCard from "../components/ReviewCard";
+import Spinner from "../components/Spinner";
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchReviews();
@@ -14,6 +16,7 @@ const AllReviews = () => {
     const response = await axios.get("/api/v1/posts/");
     const reviews = await response.data;
     await setReviews(reviews);
+    await setLoading(false);
   };
 
   let reviewDisplay = null;
@@ -33,8 +36,14 @@ const AllReviews = () => {
 
   return (
     <main className="container subpage-content">
-      <h1>All Reviews</h1>
-      <section className="all-reviews">{reviewDisplay}</section>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>
+          <h1>All Reviews</h1>
+          <section className="all-reviews">{reviewDisplay}</section>
+        </Fragment>
+      )}
     </main>
   );
 };
