@@ -19,8 +19,8 @@ const SingleReview = props => {
   const fetchReview = async () => {
     const response = await axios.get(`/api/v1/posts/${reviewID}`);
     const review = await response.data;
-    await setReview(review);
-    await setLoading(false);
+    setReview(review);
+    setLoading(false);
   };
 
   let stars = Array.apply(0, Array(review.rating)).map(() => 0);

@@ -10,13 +10,15 @@ const AllReviews = () => {
 
   useEffect(() => {
     fetchReviews();
+    if (reviews) {
+      setLoading(false);
+    }
   }, []);
 
   const fetchReviews = async () => {
     const response = await axios.get("/api/v1/posts/");
     const reviews = await response.data;
-    await setReviews(reviews);
-    await setLoading(false);
+    setReviews(reviews);
   };
 
   let reviewDisplay = null;
