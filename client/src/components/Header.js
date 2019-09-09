@@ -22,7 +22,7 @@ const Header = props => {
 
     setScrollDistance(scrolled * 1000);
   };
-  console.log(window.innerWidth);
+
   const linkClasses = [];
   if (props.history.location.pathname === "/" && scrollDistance <= 266) {
     linkClasses.push("white");
