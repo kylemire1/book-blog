@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 import Stars from "./stars";
 
-const ReviewCard = ({ id, title, bodyText, cover, rating, author }) => {
+const ReviewCard = ({ slug, title, cover, rating, author }) => {
   return (
     <div className='review-card'>
       <div className='left'>
@@ -12,12 +13,12 @@ const ReviewCard = ({ id, title, bodyText, cover, rating, author }) => {
           <span className='author-name'>{author}</span>
           <Stars rating={rating} />
         </div>
-        <Link className='btn btn-bg' to={`/review/${id}`}>
+        <Link className='btn btn-bg' to={`/review/${slug}`}>
           Read Review
         </Link>
       </div>
       <div className='right'>
-        <img className='cover' src={cover} alt='' />
+        <Img className='cover' fixed={cover.fixed} alt='' />
       </div>
     </div>
   );
