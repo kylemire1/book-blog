@@ -9,7 +9,7 @@ const Layout = props => {
     window.addEventListener("scroll", listenToScroll);
   }, []);
 
-  const [scrollDistance, setScrollDistance] = useState(document.body.scrollTop);
+  const [scrollDistance, setScrollDistance] = useState(0);
 
   const listenToScroll = () => {
     const winScroll =
