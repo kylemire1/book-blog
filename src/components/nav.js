@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 
 import logo from "../assets/logo.svg";
 
-const Nav = () => {
+const Nav = ({ linkColor }) => {
   return (
     <>
       <Link to='/'>
@@ -12,7 +12,9 @@ const Nav = () => {
       <nav>
         <ul>
           <li>
-            <Link to='/all-reviews'>All Reviews</Link>
+            <Link to='/all-reviews' style={{ color: linkColor }}>
+              All Reviews
+            </Link>
           </li>
         </ul>
       </nav>

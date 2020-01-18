@@ -69,6 +69,7 @@ header {
   padding: 2em 2em;
   display: flex;
   justify-content: space-between;
+  transition: all 250ms ease;
 }
 
 nav ul {
@@ -82,6 +83,7 @@ nav li {
 
 nav a {
   font-weight: bold;
+  transition: all 250ms ease;
 }
 
 .hero {
@@ -138,8 +140,7 @@ nav a {
 }
 
 .latest-review .cover {
-  max-width: 400px;
-  width: 100%;
+  width: 400px;
 }
 
 .review-meta {
@@ -246,7 +247,7 @@ nav a {
 }
 
 .review-container .cover {
-  max-width: 400px;
+  width: 400px;
 }
 
 .review-container .left {
@@ -319,7 +320,7 @@ footer a {
   border-radius: 18px;
 }
 
-.latest-review:nth-child(2) .right::after {
+.latest-review.even .right::after {
   content: "";
   position: absolute;
   height: 400px;

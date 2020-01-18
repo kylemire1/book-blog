@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 import Stars from "./stars";
 import Excerpt from "./excerpt";
 
@@ -11,7 +12,7 @@ const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
     bg = <img className='latest-bg' src={latestBg} aria-hidden='true' alt='' />;
   }
   return (
-    <section className='latest-review'>
+    <section className={`latest-review ${!bg ? "even" : ""}`}>
       <div className='container'>
         <div className='left'>
           <h2>{title}</h2>
@@ -27,7 +28,7 @@ const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
           </Link>
         </div>
         <div className='right'>
-          <img className='cover' src={cover} alt='' />
+          <Img className='cover' fluid={cover} alt='' />
         </div>
       </div>
       {bg}
