@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import Stars from "./stars";
-import Excerpt from "./excerpt";
+import Stars from "./rating-stars";
+import Excerpt from "./review-excerpt";
 
 import latestBg from "../assets/latest-bg.png";
 

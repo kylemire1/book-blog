@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
-import Stars from "../components/stars";
+import Stars from "../components/rating-stars";
 import singleBg from "../assets/latest-bg.png";
 
 const ReviewTemplate = ({ data }) => {

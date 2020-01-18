@@ -281,7 +281,7 @@ footer a {
 **************************/
 
 .hero-bg {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   right: 0;
   z-index: -1;
@@ -485,7 +485,7 @@ footer a {
   }
 
   .hero-bg {
-    display: none;
+    display: none !important;
   }
   .intro-text {
     max-width: 100%;

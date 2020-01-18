@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-import Stars from "./stars";
+import Stars from "./rating-stars";
 
 const ReviewCard = ({ slug, title, cover, rating, author }) => {
   return (

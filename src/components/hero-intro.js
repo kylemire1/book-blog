@@ -1,8 +1,24 @@
 import React from "react";
-import { Link } from "gatsby";
-import bg from "../assets/hero-bg.png";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "hero-bg.png" }) {
+        childImageSharp {
+          fixed(
+            width: 924
+            traceSVG: { background: "#fff", color: "#663399" }
+          ) {
+            ...GatsbyImageSharpFixed_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+  console.log(data);
+
   return (
     <>
       <section className='container hero'>
@@ -18,7 +34,12 @@ const Hero = () => {
           </Link>
         </div>
       </section>
-      <img className='hero-bg' aria-hidden='true' alt='' src={bg} />
+      <Img
+        className='hero-bg'
+        aria-hidden='true'
+        alt=''
+        fixed={data.file.childImageSharp.fixed}
+      />
     </>
   );
 };

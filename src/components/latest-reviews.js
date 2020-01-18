@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Preview from "./preview";
+import Preview from "./review-preview";
 
 const LatestReviews = () => {
   const data = useStaticQuery(graphql`
