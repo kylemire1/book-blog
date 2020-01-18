@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import ReviewCard from "../components/review-card";
+import SEO from "../components/seo";
 
 const AllReviews = () => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,10 @@ const AllReviews = () => {
   const reviews = data.allContentfulReview.nodes;
   return (
     <Layout>
+      <SEO
+        title='All Reviews'
+        description="A complete list of all the reviews we've written to date."
+      />
       <div id='content' className='container subpage-content'>
         <h1>All Reviews</h1>
         <section className='all-reviews'>

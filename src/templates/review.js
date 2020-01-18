@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
 import Stars from "../components/rating-stars";
+import SEO from "../components/seo";
 import singleBg from "../assets/latest-bg.png";
 
 const ReviewTemplate = ({ data }) => {
@@ -11,6 +12,10 @@ const ReviewTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title={review.title}
+        description={`Read our review of ${review.title} by ${review.author}.`}
+      />
       <div id='content' className='review-container container subpage-content'>
         <div className='left'>
           <h1>{review.title}</h1>
