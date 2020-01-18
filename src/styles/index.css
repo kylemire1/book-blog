@@ -233,6 +233,7 @@ nav a {
 
 .review-card .btn {
   font-size: 1.17rem;
+  text-align: center;
 }
 
 .review-card .star {
@@ -537,6 +538,10 @@ footer a {
     font-size: 90%;
   }
 
+  .btn-bg {
+    background: var(--primary-color);
+  }
+
   .latest-review {
     margin-top: 10em;
   }
@@ -603,6 +608,10 @@ footer a {
 @media only screen and (max-width: 500px) {
   html {
     font-size: 80%;
+  }
+
+  .btn-bg {
+    background: #9354de;
   }
 
   h1 {
