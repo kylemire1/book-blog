@@ -1,13 +1,33 @@
 const path = require("path");
 
-exports.onCreateNode = ({ node, actions }) => {
-  if (node.internal.type !== "ContentfulReview") return;
+exports.createPages = async ({ node, actions, graphql }) => {
+  const reviewTemplate = path.resolve("./src/templates/review.js");
 
-  actions.createPage({
-    path: `/review/${node.slug}/`,
-    component: path.resolve("./src/templates/review.js"),
-    context: {
-      slug: node.slug
+  const res = await graphql(`
+    query {
+      allContentfulReview {
+        nodes {
+          slug
+        }
+      }
     }
+  `);
+
+  res.data.allContentfulReview.nodes.forEach(node => {
+    actions.createPage({
+      path: `/review/${node.slug}/`,
+      component: reviewTemplate,
+      context: {
+        slug: node.slug
+      }
+    });
   });
+
+  // actions.createPage({
+  //   path: `/review/${res.data.allContentfulReview.node}/`,
+  //   component: reviewTemplate,
+  //   context: {
+  //     slug: node.slug
+  //   }
+  // });
 };
