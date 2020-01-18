@@ -11,7 +11,7 @@ const ReviewTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className='review-container container subpage-content'>
+      <div id='content' className='review-container container subpage-content'>
         <div className='left'>
           <h1>{review.title}</h1>
           <div className='review-meta'>

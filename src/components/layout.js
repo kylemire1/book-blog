@@ -37,6 +37,9 @@ const Layout = props => {
     <Location>
       {({ location }) => (
         <>
+          <a className='skip-nav' href='#content'>
+            Skip to Content
+          </a>
           <header
             style={{
               background: location.pathname === "/" ? headerBg : "white"

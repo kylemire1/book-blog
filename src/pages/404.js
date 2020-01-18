@@ -6,6 +6,7 @@ const PageNotFound = () => {
   return (
     <Layout>
       <div
+        id='content'
         className='container subpage-content'
         style={{
           height: "100%",

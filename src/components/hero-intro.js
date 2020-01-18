@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className='container hero'>
+      <section id='content' className='container hero'>
         <div className='intro-text'>
           <h1>We Review Books</h1>
           <p>

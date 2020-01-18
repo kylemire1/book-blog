@@ -27,7 +27,7 @@ const AllReviews = () => {
   const reviews = data.allContentfulReview.nodes;
   return (
     <Layout>
-      <div className='container subpage-content'>
+      <div id='content' className='container subpage-content'>
         <h1>All Reviews</h1>
         <section className='all-reviews'>
           {reviews.map(review => (
