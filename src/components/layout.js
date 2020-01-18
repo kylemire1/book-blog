@@ -24,8 +24,6 @@ const Layout = props => {
     setScrollDistance(scrolled * 1000);
   };
 
-  console.log(scrollDistance);
-
   let linkColor = "white";
   let headerBg = "transparent";
   if (scrollDistance > 220) {

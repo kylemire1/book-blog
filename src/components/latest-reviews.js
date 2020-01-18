@@ -28,7 +28,7 @@ const LatestReviews = () => {
       }
     }
   `);
-  console.log(data);
+
   const reviews = data.allContentfulReview.nodes;
   return (
     <>

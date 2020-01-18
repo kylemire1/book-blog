@@ -22,12 +22,4 @@ exports.createPages = async ({ node, actions, graphql }) => {
       }
     });
   });
-
-  // actions.createPage({
-  //   path: `/review/${res.data.allContentfulReview.node}/`,
-  //   component: reviewTemplate,
-  //   context: {
-  //     slug: node.slug
-  //   }
-  // });
 };
