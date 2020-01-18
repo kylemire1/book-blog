@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1500 1500" style="enable-background:new 0 0 1500 1500;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:none;stroke:#000000;stroke-width:100;stroke-linecap:round;}
+	.st2{fill:none;stroke:#B273FE;stroke-width:100;stroke-linecap:round;}
+</style>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="12.2,55.7 1500,9.2 1576.7,1526.9 -25,1500 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Logo_1" class="st0">
+		<path id="Path_6" class="st1" d="M1447,1430.8H55"/>
+		<line id="Line_2" class="st1" x1="1447" y1="1430.8" x2="1447" y2="83.8"/>
+		<line id="Line_5" class="st2" x1="932.5" y1="1229.1" x2="181.9" y2="918.2"/>
+		<line id="Line_7" class="st2" x1="994.7" y1="978.5" x2="420.2" y2="404"/>
+		<line id="Line_6" class="st2" x1="1243.5" y1="918.2" x2="932.5" y2="167.6"/>
+	</g>
+</g>
+</svg>
