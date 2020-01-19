@@ -17,11 +17,9 @@ const LatestReviews = () => {
             }
           }
           slug
-          review {
-            content {
-              content {
-                value
-              }
+          excerpt {
+            internal {
+              content
             }
           }
         }
@@ -30,6 +28,7 @@ const LatestReviews = () => {
   `);
 
   const reviews = data.allContentfulReview.nodes;
+  console.log(reviews);
   return (
     <>
       {reviews.map((review, i) => (
@@ -38,7 +37,7 @@ const LatestReviews = () => {
           index={i}
           id={review.slug}
           title={review.title}
-          bodyText={review.review.content[0].content[0].value}
+          bodyText={review.excerpt.internal.content}
           cover={review.cover.fluid}
           rating={review.rating}
           author={review.author}

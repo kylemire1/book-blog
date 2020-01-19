@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import Stars from "./rating-stars";
-import Excerpt from "./review-excerpt";
 
 import latestBg from "../assets/latest-bg.png";
 
@@ -22,7 +21,7 @@ const Preview = ({ id, index, title, bodyText, cover, rating, author }) => {
             </span>
             <Stars rating={rating} />
           </div>
-          <Excerpt bodyText={bodyText} limit={40} />
+          <p>{bodyText} . . .</p>
           <Link className='btn btn-bg' to={`/review/${id}`}>
             Full Review
           </Link>
