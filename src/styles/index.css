@@ -243,7 +243,6 @@ nav a {
 .review-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 85vh;
 }
 
@@ -257,6 +256,22 @@ nav a {
 
 .review-container .right {
   margin-left: 2em;
+  position: relative;
+}
+
+.review-container .right::after {
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background: var(--primary-color);
+  z-index: -1;
+  top: 35%;
+  right: 0;
+  border-radius: 360px;
+  -webkit-transform: translate(25%, 25%);
+  transform: translate(25%, 25%);
+  opacity: 0.1;
 }
 
 footer {
@@ -328,8 +343,7 @@ footer a {
   width: 400px;
   background: var(--primary-color);
   z-index: -1;
-  bottom: 0;
-  right: 0;
+  top: 40%;
   border-radius: 360px;
   transform: translate(25%, 25%);
   opacity: 0.1;

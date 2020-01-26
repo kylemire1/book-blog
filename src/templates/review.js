@@ -5,7 +5,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout";
 import Stars from "../components/rating-stars";
 import SEO from "../components/seo";
-import singleBg from "../assets/latest-bg.png";
 
 const ReviewTemplate = ({ data }) => {
   const review = data.contentfulReview;
@@ -35,7 +34,6 @@ const ReviewTemplate = ({ data }) => {
           <Img className='cover' alt='' fluid={review.cover.fluid} />
         </div>
       </div>
-      <img src={singleBg} alt='' className='single-bg' />
     </Layout>
   );
 };
