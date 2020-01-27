@@ -8,8 +8,8 @@ module.exports = {
     title: "Home",
     titleTemplate: "BookWorm | %s",
     description: "Timely reviews of popular new books.",
-    url: "https://gatsby-bookworm.netlify.com/", // No trailing slash allowed!
-    siteUrl: "https://gatsby-bookworm.netlify.com/"
+    url: "https://gatsby-bookworm.netlify.com",
+    siteUrl: "https://gatsby-bookworm.netlify.com"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

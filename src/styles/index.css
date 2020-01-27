@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
   overflow-x: hidden;
   width: 100vw;
+  min-height: 100%;
 }
 
 body {
@@ -21,10 +25,6 @@ body {
 * General Styling
 *
 **************************/
-
-:root {
-  --primary-color: #b273fe;
-}
 
 .container {
   padding: 0 1em;
@@ -264,7 +264,7 @@ nav a {
   position: absolute;
   height: 400px;
   width: 400px;
-  background: var(--primary-color);
+  background: #b273fe;
   z-index: -1;
   top: 35%;
   right: 0;
@@ -341,7 +341,7 @@ footer a {
   position: absolute;
   height: 400px;
   width: 400px;
-  background: var(--primary-color);
+  background: #b273fe;
   z-index: -1;
   top: 40%;
   border-radius: 360px;
@@ -375,6 +375,27 @@ footer a {
 *
 **************************/
 
+.pagination {
+  width: 100%;
+  padding: 1em;
+  margin-top: -5em;
+}
+
+.pagination ul {
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  font-size: 1.75rem;
+  padding: 0.5em;
+  color: #b273fe;
+}
+
 .skip-nav {
   background: lightgray;
   padding: 1em;
@@ -405,13 +426,13 @@ footer a {
 }
 
 .btn-bg {
-  background: var(--primary-color);
+  background: #b273fe;
   color: white;
 }
 
 .btn-nobg {
   background: transparent;
-  color: var(--primary-color);
+  color: #b273fe;
   box-shadow: 5px 8px 15px rgba(178, 115, 254, 0.3);
 }
 
@@ -427,7 +448,7 @@ footer a {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: #b273fe;
   animation: lds-grid 1.2s linear infinite;
 }
 .lds-grid div:nth-child(1) {
@@ -553,7 +574,7 @@ footer a {
   }
 
   .btn-bg {
-    background: var(--primary-color);
+    background: #b273fe;
   }
 
   .latest-review {
